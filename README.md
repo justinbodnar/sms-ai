@@ -17,4 +17,4 @@ Andrew.learn()
 
 Now you can set the script on a cronjob and any SMS sent to the phone number will get a response when the cronjob runs.
 
-* * * * * /usr/bin/expect -f /path/to/ai-sms-bot.exp
+/usr/bin/expect -f /path/to/ai-sms-bot.exp
