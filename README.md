@@ -1,15 +1,20 @@
-# ARG scripts
+# AI SMS Bot
 
-Personality.py
+A chatbot based on TensorFlow that recieves and responds to messages through Google Voice API.
 
-usage:
 
-from Personality import Personality
+# Setup
 
-Chatty_Kathy = Personality( "Chatty_Kathy" )
+Put Google credentials in ai-sms-bot.exp script.
 
-greeting = "Hi Kathy!"
+To train the neural net for the first time, run:
 
-response = Chatty_Kathy.converse( greeting )
+/usr/bin/expect -f ai-sms-bot.exp
 
-print( response )
+After initial run, comment out the line in main:
+
+Andrew.learn()
+
+Now you can set the script on a cronjob and any SMS sent to the phone number will get a response when the cronjob runs.
+
+* * * * * /usr/bin/expect -f /path/to/ai-sms-bot.exp

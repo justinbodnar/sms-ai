@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn python ./ai-sms-bot.py
+expect "address"
+send -- "GOOGLE_VOICE_EMAIL_ADDRESS\r"
+expect "Password"
+send -- "GOOGLE_VOICE_PASSWORD\r"
+expect eof
