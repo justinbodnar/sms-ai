@@ -11,9 +11,11 @@ To train the neural net for the first time, run:
 
 /usr/bin/expect -f ai-sms-bot.exp
 
+
 After initial run, comment out the line in main:
 
 Andrew.learn()
+
 
 Now you can set the script on a cronjob and any SMS sent to the phone number will get a response when the cronjob runs.
 
